@@ -1,5 +1,5 @@
-import { Dictionary } from './types/interfaces/Dictionary';
-import FilterizrOptions from './FilterizrOptions/FilterizrOptions';
+import { Dictionary } from "./types/interfaces/Dictionary";
+import FilterizrOptions from "./FilterizrOptions/FilterizrOptions";
 export interface Position {
     left: number;
     top: number;
@@ -41,7 +41,10 @@ export default class FilterItem {
      * @param delay in ms
      * @param delayMode can be 'alternate' or 'progressive'
      */
-    getTransitionDelay(delay: number, delayMode: 'progressive' | 'alternate'): number;
+    getTransitionDelay(
+        delay: number,
+        delayMode: "progressive" | "alternate"
+    ): number;
     /**
      * Returns true if the text contents of the FilterItem match the search term
      * @param searchTerm to look up

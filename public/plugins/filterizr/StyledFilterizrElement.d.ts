@@ -1,5 +1,5 @@
-import { Destructible } from './types/interfaces/Destructible';
-import FilterizrOptions from './FilterizrOptions';
+import { Destructible } from "./types/interfaces/Destructible";
+import FilterizrOptions from "./FilterizrOptions";
 export default abstract class StyledFilterizrElement implements Destructible {
     protected options: FilterizrOptions;
     protected node: HTMLElement;

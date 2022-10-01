@@ -1,8 +1,8 @@
-import FilterizrOptions from './FilterizrOptions/FilterizrOptions';
-import FilterContainer from './FilterContainer';
-import FilterItem from './FilterItem';
-import { Filter } from './ActiveFilter';
-import { RawOptions } from './FilterizrOptions/defaultOptions';
+import FilterizrOptions from "./FilterizrOptions/FilterizrOptions";
+import FilterContainer from "./FilterContainer";
+import FilterItem from "./FilterItem";
+import { Filter } from "./ActiveFilter";
+import { RawOptions } from "./FilterizrOptions/defaultOptions";
 export default class Filterizr {
     /**
      * Main Filterizr classes exported as static members
@@ -20,7 +20,10 @@ export default class Filterizr {
     private filterContainer;
     private filterControls?;
     private filterizrState;
-    constructor(selectorOrNode?: string | HTMLElement, userOptions?: RawOptions);
+    constructor(
+        selectorOrNode?: string | HTMLElement,
+        userOptions?: RawOptions
+    );
     private readonly filterItems;
     /**
      * Filters the items in the grid by a category
@@ -38,7 +41,7 @@ export default class Filterizr {
      * @param sortAttr the attribute by which to perform the sort
      * @param sortOrder ascending or descending
      */
-    sort(sortAttr?: string, sortOrder?: 'asc' | 'desc'): void;
+    sort(sortAttr?: string, sortOrder?: "asc" | "desc"): void;
     /**
      * Searches through the FilterItems for a given string and adds an additional filter layer.
      * @param searchTerm the term for which to search

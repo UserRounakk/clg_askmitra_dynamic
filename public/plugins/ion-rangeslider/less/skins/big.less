@@ -13,16 +13,14 @@
     @line_color_3: #ddd;
     @bar_color: #428bca;
     @handle_color_1: #cbcfd5;
-    @handle_color_2: #B4B9BE;
+    @handle_color_2: #b4b9be;
     @handle_color_3: white;
-    @handle_color_4: #919BA5;
+    @handle_color_4: #919ba5;
     @minmax_text_color: white;
     @minmax_bg_color: #9f9f9f;
     @label_color_1: #428bca;
     @label_color_2: white;
     @grid_color_1: #428bca;
-
-
 
     height: 55px;
 
@@ -34,7 +32,11 @@
         top: @top;
         height: @line_height;
         background-color: @line_color_1;
-        background: linear-gradient(to bottom, @line_color_3 -50%, @line_color_1 150%);
+        background: linear-gradient(
+            to bottom,
+            @line_color_3 -50%,
+            @line_color_1 150%
+        );
         border: 1px solid @line_color_2;
         border-radius: @line_height;
     }
@@ -44,8 +46,13 @@
         height: @line_height;
         background-color: lighten(@bar_color, 20%);
         border: 1px solid @bar_color;
-        background: linear-gradient(to bottom, lighten(@bar_color, 70%) 0%, @bar_color 30%, lighten(@bar_color, 30%) 100%);
-        box-shadow: inset 0 0 1px 1px rgba(255,255,255,0.5);
+        background: linear-gradient(
+            to bottom,
+            lighten(@bar_color, 70%) 0%,
+            @bar_color 30%,
+            lighten(@bar_color, 30%) 100%
+        );
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.5);
 
         &--single {
             border-radius: @line_height 0 0 @line_height;
@@ -62,17 +69,28 @@
         top: 25px;
         width: @handle_width;
         height: @handle_height;
-        border: 1px solid rgba(0,0,0,0.3);
+        border: 1px solid rgba(0, 0, 0, 0.3);
         background-color: @handle_color_1;
-        background: linear-gradient(to bottom, @handle_color_3 0%, @handle_color_2 30%, @handle_color_3 100%);
-        box-shadow: 1px 1px 2px rgba(0,0,0,0.2), inset 0 0 3px 1px @handle_color_3;
+        background: linear-gradient(
+            to bottom,
+            @handle_color_3 0%,
+            @handle_color_2 30%,
+            @handle_color_3 100%
+        );
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2),
+            inset 0 0 3px 1px @handle_color_3;
         border-radius: @handle_width;
 
         &.state_hover,
         &:hover {
-            border-color: rgba(0,0,0,0.45);
+            border-color: rgba(0, 0, 0, 0.45);
             background-color: darken(@handle_color_1, 20%);
-            background: linear-gradient(to bottom, @handle_color_3 0%, @handle_color_4 30%, @handle_color_3 100%);
+            background: linear-gradient(
+                to bottom,
+                @handle_color_3 0%,
+                @handle_color_4 30%,
+                @handle_color_3 100%
+            );
         }
     }
 
@@ -93,7 +111,11 @@
         text-shadow: none;
         padding: 1px 5px;
         background-color: @label_color_1;
-        background: linear-gradient(to bottom, @label_color_1 0%, darken(@label_color_1, 10%) 100%);
+        background: linear-gradient(
+            to bottom,
+            @label_color_1 0%,
+            darken(@label_color_1, 10%) 100%
+        );
         border-radius: @custom_radius;
     }
 

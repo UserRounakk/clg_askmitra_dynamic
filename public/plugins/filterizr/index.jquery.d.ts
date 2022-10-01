@@ -6,5 +6,5 @@
  * @see {@link http://yiotis.net/filterizr}
  * @license MIT
  */
-import Filterizr from './Filterizr';
+import Filterizr from "./Filterizr";
 export default Filterizr;

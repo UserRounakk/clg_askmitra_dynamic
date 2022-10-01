@@ -19,8 +19,6 @@
     @grid_color_1: #dedede;
     @grid_color_2: silver;
 
-
-
     height: 55px;
 
     &.irs-with-grid {
@@ -31,7 +29,11 @@
         top: @top;
         height: @line_height;
         background-color: @line_color;
-        background: linear-gradient(to bottom, lighten(@line_color, 5%) 0%, @line_color 100%);
+        background: linear-gradient(
+            to bottom,
+            lighten(@line_color, 5%) 0%,
+            @line_color 100%
+        );
         border: 1px solid darken(@line_color, 15%);
         border-bottom-width: 0;
         border-radius: @line_height;
@@ -41,7 +43,11 @@
         top: @top;
         height: @line_height;
         background: @bar_color;
-        background: linear-gradient(to bottom, @bar_color 0%, darken(@bar_color, 10%) 100%);
+        background: linear-gradient(
+            to bottom,
+            @bar_color 0%,
+            darken(@bar_color, 10%) 100%
+        );
 
         &--single {
             border-radius: @line_height 0 0 @line_height;
@@ -60,13 +66,14 @@
         height: @handle_height;
         border: 1px solid darken(@line_color, 15%);
         border-top-width: 0;
-        box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
         border-radius: 0 0 3px 3px;
 
         & > i:nth-child(1) {
             position: absolute;
             display: block;
-            top: -4px; left: 1px;
+            top: -4px;
+            left: 1px;
             width: (@handle_width - 6px);
             height: (@handle_width - 6px);
             border: 1px solid darken(@line_color, 15%);
@@ -78,11 +85,16 @@
             position: absolute;
             display: block;
             box-sizing: border-box;
-            top: 0; left: 0;
+            top: 0;
+            left: 0;
             width: (@handle_width - 2);
             height: (@handle_height - 1);
             background: @handle_color_1;
-            background: linear-gradient(to bottom, @handle_color_2 0%, @handle_color_1 100%);
+            background: linear-gradient(
+                to bottom,
+                @handle_color_2 0%,
+                @handle_color_1 100%
+            );
             border-radius: 0 0 3px 3px;
         }
 
@@ -90,8 +102,10 @@
             position: absolute;
             display: block;
             box-sizing: border-box;
-            top: 3px; left: 3px;
-            width: 4px; height: 5px;
+            top: 3px;
+            left: 3px;
+            width: 4px;
+            height: 5px;
             border-left: 1px solid darken(@line_color, 15%);
             border-right: 1px solid darken(@line_color, 15%);
         }
@@ -100,7 +114,12 @@
         &:hover {
             border-color: darken(@line_color, 30%);
             background: #c3c7cd;
-            background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(145,155,165,1) 30%,rgba(255,255,255,1) 100%);
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(145, 155, 165, 1) 30%,
+                rgba(255, 255, 255, 1) 100%
+            );
 
             & > i:nth-child(1) {
                 border-color: darken(@line_color, 30%);

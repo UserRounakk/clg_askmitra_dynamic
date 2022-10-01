@@ -1,105 +1,105 @@
-.theme{
-    color: #407BFF;
+.theme {
+    color: #407bff;
 }
-.bg-theme{
-    background-color: #407BFF;
+.bg-theme {
+    background-color: #407bff;
     color: white;
 }
-.main-heading{
+.main-heading {
     font-size: 2.5rem;
     font-weight: bold;
 }
 .arrow-position {
     top: 30%;
-    left: 40%
+    left: 40%;
 }
 
 .atom-position {
     top: 20%;
-    left: 35%
+    left: 35%;
 }
 .tab-secondary {
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
 }
 
-#what-is-clg{
+#what-is-clg {
     margin-top: 150px;
-    background-color: #F1F7FF;
+    background-color: #f1f7ff;
     border-radius: 20px;
-    h1{
+    h1 {
         margin: 0 0 20px 0;
     }
-    p{
-        width:50%;
+    p {
+        width: 50%;
         margin-left: 25%;
         font-size: 1.2rem;
-        color: #212B36;
+        color: #212b36;
     }
 }
-#code-of-conduct{
+#code-of-conduct {
     margin-top: 150px;
     font-size: 1.2rem;
-    h1{
+    h1 {
         margin: 40px 0;
     }
     ul {
         list-style: none;
-        text-indent: -.9em;
-        width:90%;
+        text-indent: -0.9em;
+        width: 90%;
     }
-    li{
+    li {
         margin-bottom: 20px;
     }
-    i{
-        color: #407BFF;
+    i {
+        color: #407bff;
     }
-    .text-secondary{
+    .text-secondary {
         font-size: 1rem;
     }
 }
 
-#resources{
+#resources {
     margin-top: 150px;
-    .text-secondary{
+    .text-secondary {
         font-size: 1.3rem;
     }
-    .img-container{
+    .img-container {
         width: 50%;
         // height: 50%;
         margin-left: 25%;
     }
 }
-#organizers{
+#organizers {
     margin-top: 150px;
-    h1{
+    h1 {
         margin-bottom: 50px;
     }
 }
-.col-md-3{
+.col-md-3 {
     margin-bottom: 20px;
 }
-.tool-content{
+.tool-content {
     display: flex;
-    width:100%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     gap: 20px;
 
-    img{
+    img {
         width: 20%;
         height: auto;
     }
 }
-.faqs{
-    margin-top:100px;
-    h1{
+.faqs {
+    margin-top: 100px;
+    h1 {
         margin-bottom: 50px;
     }
 }
 
-#footer{
+#footer {
     background-color: #121830 !important;
-    p{
+    p {
         margin-bottom: 0;
         padding: 20px;
     }
@@ -107,17 +107,17 @@
 
 // Bootstrap Extra Large Breakpoint
 
-@media screen and (max-width:1200px) {
-    #what-is-clg{
-        margin-top:150px;
+@media screen and (max-width: 1200px) {
+    #what-is-clg {
+        margin-top: 150px;
         max-width: 95vw;
-        p{
-            width:100%;
+        p {
+            width: 100%;
             margin-left: 0;
         }
     }
-    #code-of-conduct{
-        ul{
+    #code-of-conduct {
+        ul {
             width: 100%;
             margin-bottom: 0;
         }

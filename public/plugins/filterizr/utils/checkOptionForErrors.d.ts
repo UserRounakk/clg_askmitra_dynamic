@@ -6,4 +6,10 @@
  * @param {Array} allowed accepted values for option
  * @param {String} furtherHelpLink a link to docs for further help
  */
-export declare const checkOptionForErrors: (name: string, value: string | number | boolean | object | Function | any[], type?: string, allowed?: RegExp | any[], furtherHelpLink?: string) => void;
+export declare const checkOptionForErrors: (
+    name: string,
+    value: string | number | boolean | object | Function | any[],
+    type?: string,
+    allowed?: RegExp | any[],
+    furtherHelpLink?: string
+) => void;

@@ -33,7 +33,7 @@ h1 {
 }
 
 h1:before {
-    content: '#';
+    content: "#";
     color: #666;
     position: relative;
     padding-right: 5px;
@@ -71,12 +71,12 @@ label {
 }
 
 .gist {
-   overflow: auto;
+    overflow: auto;
 }
 
 .gist .blob-wrapper.data {
-   max-height: 350px;
-   overflow: auto;
+    max-height: 350px;
+    overflow: auto;
 }
 
 .list-group-item {
@@ -104,7 +104,8 @@ label {
     }
 }
 
-p, pre {
+p,
+pre {
     margin-bottom: 2em;
 }
 
@@ -132,7 +133,8 @@ input[type="text"] {
     color: #fff;
     text-align: center;
 }
-#footer a:link, #footer a:visited {
+#footer a:link,
+#footer a:visited {
     color: #fff;
     border-bottom: 1px dotted #fff;
 }

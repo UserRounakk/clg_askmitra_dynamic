@@ -1,8 +1,15 @@
-import { Destructible, Dimensions, Resizable, Styleable } from './types/interfaces';
-import FilterizrOptions from './FilterizrOptions';
-import EventReceiver from './EventReceiver';
-import StyledFilterizrElement from './StyledFilterizrElement';
-export default abstract class FilterizrElement implements Destructible, Resizable, Styleable {
+import {
+    Destructible,
+    Dimensions,
+    Resizable,
+    Styleable,
+} from "./types/interfaces";
+import FilterizrOptions from "./FilterizrOptions";
+import EventReceiver from "./EventReceiver";
+import StyledFilterizrElement from "./StyledFilterizrElement";
+export default abstract class FilterizrElement
+    implements Destructible, Resizable, Styleable
+{
     node: Element;
     options: FilterizrOptions;
     protected eventReceiver: EventReceiver;

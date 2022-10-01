@@ -1,4 +1,4 @@
-import { Destructible } from './types/interfaces';
+import { Destructible } from "./types/interfaces";
 declare type Receiver = NodeListOf<Element> | Element | Window;
 export default class EventReceiver implements Destructible {
     private receiver;

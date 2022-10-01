@@ -3,22 +3,40 @@
 //   ../../../../../@fullcalendar/core
 //   ../../../../../@fullcalendar/daygrid
 
-declare module '@fullcalendar/timegrid' {
-    import AbstractTimeGridView from '@fullcalendar/timegrid/AbstractTimeGridView';
-    import TimeGridView, { buildDayTable } from '@fullcalendar/timegrid/TimeGridView';
-    import { TimeGridSeg } from '@fullcalendar/timegrid/TimeGrid';
-    import { TimeGridSlicer, buildDayRanges } from '@fullcalendar/timegrid/SimpleTimeGrid';
-    export { TimeGridView, AbstractTimeGridView, buildDayTable, buildDayRanges, TimeGridSlicer, TimeGridSeg };
-    export { default as TimeGrid } from '@fullcalendar/timegrid/TimeGrid';
+declare module "@fullcalendar/timegrid" {
+    import AbstractTimeGridView from "@fullcalendar/timegrid/AbstractTimeGridView";
+    import TimeGridView, {
+        buildDayTable,
+    } from "@fullcalendar/timegrid/TimeGridView";
+    import { TimeGridSeg } from "@fullcalendar/timegrid/TimeGrid";
+    import {
+        TimeGridSlicer,
+        buildDayRanges,
+    } from "@fullcalendar/timegrid/SimpleTimeGrid";
+    export {
+        TimeGridView,
+        AbstractTimeGridView,
+        buildDayTable,
+        buildDayRanges,
+        TimeGridSlicer,
+        TimeGridSeg,
+    };
+    export { default as TimeGrid } from "@fullcalendar/timegrid/TimeGrid";
     const _default: import("@fullcalendar/core").PluginDef;
     export default _default;
 }
 
-declare module '@fullcalendar/timegrid/AbstractTimeGridView' {
-    import { ScrollComponent, View, ComponentContext, Duration, ViewProps } from '@fullcalendar/core';
-    import { DayGrid } from '@fullcalendar/daygrid';
-    import TimeGrid from '@fullcalendar/timegrid/TimeGrid';
-    import AllDaySplitter from '@fullcalendar/timegrid/AllDaySplitter';
+declare module "@fullcalendar/timegrid/AbstractTimeGridView" {
+    import {
+        ScrollComponent,
+        View,
+        ComponentContext,
+        Duration,
+        ViewProps,
+    } from "@fullcalendar/core";
+    import { DayGrid } from "@fullcalendar/daygrid";
+    import TimeGrid from "@fullcalendar/timegrid/TimeGrid";
+    import AllDaySplitter from "@fullcalendar/timegrid/AllDaySplitter";
     export { AbstractTimeGridView as default, AbstractTimeGridView };
     abstract class AbstractTimeGridView extends View {
         timeGrid: TimeGrid;
@@ -33,7 +51,11 @@ declare module '@fullcalendar/timegrid/AbstractTimeGridView' {
         renderSkeletonHtml(): string;
         getNowIndicatorUnit(): string;
         unrenderNowIndicator(): void;
-        updateSize(isResize: boolean, viewHeight: number, isAuto: boolean): void;
+        updateSize(
+            isResize: boolean,
+            viewHeight: number,
+            isAuto: boolean
+        ): void;
         updateBaseSize(isResize: any, viewHeight: any, isAuto: any): void;
         computeScrollerHeight(viewHeight: any): number;
         computeDateScroll(duration: Duration): {
@@ -52,11 +74,18 @@ declare module '@fullcalendar/timegrid/AbstractTimeGridView' {
     }
 }
 
-declare module '@fullcalendar/timegrid/TimeGridView' {
-    import { DateProfileGenerator, DateProfile, ComponentContext, DayHeader, DayTable, ViewProps } from '@fullcalendar/core';
-    import { SimpleDayGrid } from '@fullcalendar/daygrid';
-    import SimpleTimeGrid from '@fullcalendar/timegrid/SimpleTimeGrid';
-    import AbstractTimeGridView from '@fullcalendar/timegrid/AbstractTimeGridView';
+declare module "@fullcalendar/timegrid/TimeGridView" {
+    import {
+        DateProfileGenerator,
+        DateProfile,
+        ComponentContext,
+        DayHeader,
+        DayTable,
+        ViewProps,
+    } from "@fullcalendar/core";
+    import { SimpleDayGrid } from "@fullcalendar/daygrid";
+    import SimpleTimeGrid from "@fullcalendar/timegrid/SimpleTimeGrid";
+    import AbstractTimeGridView from "@fullcalendar/timegrid/AbstractTimeGridView";
     export { TimeGridView as default, TimeGridView };
     class TimeGridView extends AbstractTimeGridView {
         header: DayHeader;
@@ -67,11 +96,25 @@ declare module '@fullcalendar/timegrid/TimeGridView' {
         _unrenderSkeleton(): void;
         renderNowIndicator(date: any): void;
     }
-    export function buildDayTable(dateProfile: DateProfile, dateProfileGenerator: DateProfileGenerator): DayTable;
+    export function buildDayTable(
+        dateProfile: DateProfile,
+        dateProfileGenerator: DateProfileGenerator
+    ): DayTable;
 }
 
-declare module '@fullcalendar/timegrid/TimeGrid' {
-    import { PositionCache, Duration, DateMarker, DateFormatter, ComponentContext, DateComponent, Seg, EventSegUiInteractionState, DateProfile, Theme } from '@fullcalendar/core';
+declare module "@fullcalendar/timegrid/TimeGrid" {
+    import {
+        PositionCache,
+        Duration,
+        DateMarker,
+        DateFormatter,
+        ComponentContext,
+        DateComponent,
+        Seg,
+        EventSegUiInteractionState,
+        DateProfile,
+        Theme,
+    } from "@fullcalendar/core";
     export interface RenderProps {
         renderBgIntroHtml: () => string;
         renderIntroHtml: () => string;
@@ -152,7 +195,10 @@ declare module '@fullcalendar/timegrid/TimeGrid' {
         buildPositionCaches(): void;
         buildColPositions(): void;
         buildSlatPositions(): void;
-        positionToHit(positionLeft: any, positionTop: any): {
+        positionToHit(
+            positionLeft: any,
+            positionTop: any
+        ): {
             col: any;
             dateSpan: {
                 range: {
@@ -178,9 +224,23 @@ declare module '@fullcalendar/timegrid/TimeGrid' {
     }
 }
 
-declare module '@fullcalendar/timegrid/SimpleTimeGrid' {
-    import { DateComponent, DateProfile, EventStore, EventUiHash, EventInteractionState, DateSpan, DateRange, DayTable, DateEnv, DateMarker, Slicer, Hit, ComponentContext } from '@fullcalendar/core';
-    import TimeGrid, { TimeGridSeg } from '@fullcalendar/timegrid/TimeGrid';
+declare module "@fullcalendar/timegrid/SimpleTimeGrid" {
+    import {
+        DateComponent,
+        DateProfile,
+        EventStore,
+        EventUiHash,
+        EventInteractionState,
+        DateSpan,
+        DateRange,
+        DayTable,
+        DateEnv,
+        DateMarker,
+        Slicer,
+        Hit,
+        ComponentContext,
+    } from "@fullcalendar/core";
+    import TimeGrid, { TimeGridSeg } from "@fullcalendar/timegrid/TimeGrid";
     export interface SimpleTimeGridProps {
         dateProfile: DateProfile | null;
         dayTable: DayTable;
@@ -203,14 +263,18 @@ declare module '@fullcalendar/timegrid/SimpleTimeGrid' {
         buildPositionCaches(): void;
         queryHit(positionLeft: number, positionTop: number): Hit;
     }
-    export function buildDayRanges(dayTable: DayTable, dateProfile: DateProfile, dateEnv: DateEnv): DateRange[];
+    export function buildDayRanges(
+        dayTable: DayTable,
+        dateProfile: DateProfile,
+        dateEnv: DateEnv
+    ): DateRange[];
     export class TimeGridSlicer extends Slicer<TimeGridSeg, [DateRange[]]> {
         sliceRange(range: DateRange, dayRanges: DateRange[]): TimeGridSeg[];
     }
 }
 
-declare module '@fullcalendar/timegrid/AllDaySplitter' {
-    import { Splitter, EventDef, DateSpan } from '@fullcalendar/core';
+declare module "@fullcalendar/timegrid/AllDaySplitter" {
+    import { Splitter, EventDef, DateSpan } from "@fullcalendar/core";
     export { AllDaySplitter as default, AllDaySplitter };
     class AllDaySplitter extends Splitter {
         getKeyInfo(): {
@@ -221,4 +285,3 @@ declare module '@fullcalendar/timegrid/AllDaySplitter' {
         getKeysForEventDef(eventDef: EventDef): string[];
     }
 }
-
