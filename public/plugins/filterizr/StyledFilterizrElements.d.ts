@@ -1,2 +1,1 @@
-export default abstract class StyledFilterizrElements {
-}
+export default abstract class StyledFilterizrElements {}

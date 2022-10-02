@@ -1,24 +1,28 @@
 /*!
-* dependencyLibs/inputmask.dependencyLib.jqlite.js
-* https://github.com/RobinHerbots/Inputmask
-* Copyright (c) 2010 - 2019 Robin Herbots
-* Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
-* Version: 4.0.9
-*/
+ * dependencyLibs/inputmask.dependencyLib.jqlite.js
+ * https://github.com/RobinHerbots/Inputmask
+ * Copyright (c) 2010 - 2019 Robin Herbots
+ * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+ * Version: 4.0.9
+ */
 
-(function(factory) {
+(function (factory) {
     if (typeof define === "function" && define.amd) {
-        define([ "jqlite", "../global/window" ], factory);
+        define(["jqlite", "../global/window"], factory);
     } else if (typeof exports === "object") {
-        module.exports = factory(require("jqlite"), require("../global/window"));
+        module.exports = factory(
+            require("jqlite"),
+            require("../global/window")
+        );
     } else {
         window.dependencyLib = factory(jqlite, window);
     }
-})(function($, window) {
+})(function ($, window) {
     var document = window.document;
     function indexOf(list, elem) {
-        var i = 0, len = list.length;
-        for (;i < len; i++) {
+        var i = 0,
+            len = list.length;
+        for (; i < len; i++) {
             if (list[i] === elem) {
                 return i;
             }
@@ -29,33 +33,53 @@
         return obj != null && obj === obj.window;
     }
     function isArraylike(obj) {
-        var length = "length" in obj && obj.length, ltype = typeof obj;
+        var length = "length" in obj && obj.length,
+            ltype = typeof obj;
         if (ltype === "function" || isWindow(obj)) {
             return false;
         }
         if (obj.nodeType === 1 && length) {
             return true;
         }
-        return ltype === "array" || length === 0 || typeof length === "number" && length > 0 && length - 1 in obj;
+        return (
+            ltype === "array" ||
+            length === 0 ||
+            (typeof length === "number" && length > 0 && length - 1 in obj)
+        );
     }
-    $.inArray = function(elem, arr, i) {
+    $.inArray = function (elem, arr, i) {
         return arr == null ? -1 : indexOf(arr, elem, i);
     };
-    $.isFunction = function(obj) {
+    $.isFunction = function (obj) {
         return typeof obj === "function";
     };
     $.isArray = Array.isArray;
-    $.isPlainObject = function(obj) {
+    $.isPlainObject = function (obj) {
         if (typeof obj !== "object" || obj.nodeType || isWindow(obj)) {
             return false;
         }
-        if (obj.constructor && !Object.hasOwnProperty.call(obj.constructor.prototype, "isPrototypeOf")) {
+        if (
+            obj.constructor &&
+            !Object.hasOwnProperty.call(
+                obj.constructor.prototype,
+                "isPrototypeOf"
+            )
+        ) {
             return false;
         }
         return true;
     };
-    $.extend = function() {
-        var options, name, src, copy, copyIsArray, clone, target = arguments[0] || {}, i = 1, length = arguments.length, deep = false;
+    $.extend = function () {
+        var options,
+            name,
+            src,
+            copy,
+            copyIsArray,
+            clone,
+            target = arguments[0] || {},
+            i = 1,
+            length = arguments.length,
+            deep = false;
         if (typeof target === "boolean") {
             deep = target;
             target = arguments[i] || {};
@@ -68,7 +92,7 @@
             target = this;
             i--;
         }
-        for (;i < length; i++) {
+        for (; i < length; i++) {
             if ((options = arguments[i]) != null) {
                 for (name in options) {
                     src = target[name];
@@ -76,7 +100,12 @@
                     if (target === copy) {
                         continue;
                     }
-                    if (deep && copy && ($.isPlainObject(copy) || (copyIsArray = $.isArray(copy)))) {
+                    if (
+                        deep &&
+                        copy &&
+                        ($.isPlainObject(copy) ||
+                            (copyIsArray = $.isArray(copy)))
+                    ) {
                         if (copyIsArray) {
                             copyIsArray = false;
                             clone = src && $.isArray(src) ? src : [];
@@ -92,8 +121,9 @@
         }
         return target;
     };
-    $.each = function(obj, callback) {
-        var value, i = 0;
+    $.each = function (obj, callback) {
+        var value,
+            i = 0;
         if (isArraylike(obj)) {
             for (var length = obj.length; i < length; i++) {
                 value = callback.call(obj[i], i, obj[i]);
@@ -111,19 +141,26 @@
         }
         return obj;
     };
-    $.data = function(elem, name, data) {
+    $.data = function (elem, name, data) {
         return $(elem).data(name, data);
     };
-    $.Event = $.Event || function CustomEvent(event, params) {
-        params = params || {
-            bubbles: false,
-            cancelable: false,
-            detail: undefined
+    $.Event =
+        $.Event ||
+        function CustomEvent(event, params) {
+            params = params || {
+                bubbles: false,
+                cancelable: false,
+                detail: undefined,
+            };
+            var evt = document.createEvent("CustomEvent");
+            evt.initCustomEvent(
+                event,
+                params.bubbles,
+                params.cancelable,
+                params.detail
+            );
+            return evt;
         };
-        var evt = document.createEvent("CustomEvent");
-        evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
-        return evt;
-    };
     $.Event.prototype = window.Event.prototype;
     return $;
 });

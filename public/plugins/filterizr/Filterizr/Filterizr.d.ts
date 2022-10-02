@@ -1,8 +1,8 @@
-import { Filter } from '../types';
-import { RawOptions, Destructible } from '../types/interfaces';
-import FilterizrOptions from '../FilterizrOptions';
-import FilterContainer from '../FilterContainer';
-import FilterItem from '../FilterItem';
+import { Filter } from "../types";
+import { RawOptions, Destructible } from "../types/interfaces";
+import FilterizrOptions from "../FilterizrOptions";
+import FilterContainer from "../FilterContainer";
+import FilterItem from "../FilterItem";
 export default class Filterizr implements Destructible {
     /**
      * Main Filterizr classes exported as static members
@@ -21,7 +21,10 @@ export default class Filterizr implements Destructible {
     private filterControls?;
     private imagesHaveLoaded;
     private spinner?;
-    constructor(selectorOrNode?: string | HTMLElement, userOptions?: RawOptions);
+    constructor(
+        selectorOrNode?: string | HTMLElement,
+        userOptions?: RawOptions
+    );
     private readonly filterItems;
     /**
      * Filters the items in the grid by a category
@@ -42,7 +45,7 @@ export default class Filterizr implements Destructible {
      * @param sortAttr the attribute by which to perform the sort
      * @param sortOrder ascending or descending
      */
-    sort(sortAttr?: string, sortOrder?: 'asc' | 'desc'): void;
+    sort(sortAttr?: string, sortOrder?: "asc" | "desc"): void;
     /**
      * Searches through the FilterItems for a given string and adds an additional filter layer.
      */

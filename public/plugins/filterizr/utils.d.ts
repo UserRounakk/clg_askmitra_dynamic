@@ -1,12 +1,15 @@
-import { Dictionary } from './types/interfaces/Dictionary';
-import FilterItem from './FilterItem';
+import { Dictionary } from "./types/interfaces/Dictionary";
+import FilterItem from "./FilterItem";
 /**
  * A function to check that all elements of an array are found within another array.
  * @param {Array} arr1 is the array of strings to be checked
  * @param {Array} arr2 is the array of strings to check against
  * @return {Boolean} whether all string of arr1 are contained in arr2
  */
-declare const allStringsOfArray1InArray2: (arr1: string[], arr2: string[]) => boolean;
+declare const allStringsOfArray1InArray2: (
+    arr1: string[],
+    arr2: string[]
+) => boolean;
 export { allStringsOfArray1InArray2 };
 /**
  * Given a CSS prop it will normalize the syntax for JS
@@ -40,7 +43,10 @@ export { getDataAttributesOfHTMLNode };
  * @param {String} dataAttributeName name of data attribute
  * @return {Boolean} data attribute exists
  */
-declare function checkDataAttributeExists(node: Element, dataAttributeName: string): boolean;
+declare function checkDataAttributeExists(
+    node: Element,
+    dataAttributeName: string
+): boolean;
 export { checkDataAttributeExists };
 /**
  * A very simple function to perform a basic
@@ -70,7 +76,11 @@ export { intersection };
 /**
  * Debounce of Underscore.js
  */
-declare const debounce: (func: Function, wait: number, immediate: boolean) => Function;
+declare const debounce: (
+    func: Function,
+    wait: number,
+    immediate: boolean
+) => Function;
 export { debounce };
 /**
  * Fisher-Yates shuffle ES6 non-mutating implementation.
@@ -86,7 +96,10 @@ export { shuffle };
  * @param {Array} arr2 the second array of FilterItems
  * @return {Boolean} equality
  */
-declare const filterItemArraysHaveSameSorting: (filterItemsA: FilterItem[], filterItemsB: FilterItem[]) => boolean;
+declare const filterItemArraysHaveSameSorting: (
+    filterItemsA: FilterItem[],
+    filterItemsB: FilterItem[]
+) => boolean;
 export { filterItemArraysHaveSameSorting };
 /**
  * Simple non-mutating sorting function for arrays of objects by a property
@@ -104,14 +117,22 @@ export { sortBy };
  * @param {Array} allowed accepted values for option
  * @param {String} furtherHelpLink a link to docs for further help
  */
-declare const checkOptionForErrors: (name: string, value: string | number | boolean | object | Function | any[], type?: string, allowed?: RegExp | any[], furtherHelpLink?: string) => void;
+declare const checkOptionForErrors: (
+    name: string,
+    value: string | number | boolean | object | Function | any[],
+    type?: string,
+    allowed?: RegExp | any[],
+    furtherHelpLink?: string
+) => void;
 export { checkOptionForErrors };
 /**
  * Wrapper around document.querySelector, will function as
  * an identity function if an HTML element is passed in
  * @param {HTMLElement|string} nodeOrSelector
  */
-declare const getHTMLElement: (selectorOrNode: string | HTMLElement) => HTMLElement;
+declare const getHTMLElement: (
+    selectorOrNode: string | HTMLElement
+) => HTMLElement;
 export { getHTMLElement };
 /**
  * A Regexp to validate potential values for the CSS easing property of transitions.

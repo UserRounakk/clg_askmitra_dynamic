@@ -1,6 +1,6 @@
-import { Filter } from './ActiveFilter';
-import FilterItem from './FilterItem';
-import FilterizrOptions from './FilterizrOptions/FilterizrOptions';
+import { Filter } from "./ActiveFilter";
+import FilterItem from "./FilterItem";
+import FilterizrOptions from "./FilterizrOptions/FilterizrOptions";
 export default class FilterItems {
     private filterItems;
     private options;
@@ -15,7 +15,7 @@ export default class FilterItems {
     push(filterItem: FilterItem): number;
     getFiltered(filter: Filter): FilterItem[];
     getFilteredOut(filter: Filter): FilterItem[];
-    getSorted(sortAttr?: string, sortOrder?: 'asc' | 'desc'): FilterItem[];
+    getSorted(sortAttr?: string, sortOrder?: "asc" | "desc"): FilterItem[];
     getSearched(searchTerm: string): FilterItem[];
     getShuffled(): FilterItem[];
     private shouldBeFiltered;

@@ -12,7 +12,7 @@ body {
     height: 100%;
     padding: 10px;
     color: #262626;
-    font-family: 'Helvetica Neue Light', 'Open Sans', Helvetica;
+    font-family: "Helvetica Neue Light", "Open Sans", Helvetica;
     font-size: 14px;
     font-weight: 300;
 }
@@ -20,14 +20,14 @@ body {
 h1 {
     margin: 0 0 8px 0;
     font-size: 24px;
-    font-family: 'Helvetica Neue Light', 'Open Sans', Helvetica;
+    font-family: "Helvetica Neue Light", "Open Sans", Helvetica;
     font-weight: 300;
 }
 
 h2 {
     margin: 16px 0 8px 0;
     font-size: 18px;
-    font-family: 'Helvetica Neue Light', 'Open Sans', Helvetica;
+    font-family: "Helvetica Neue Light", "Open Sans", Helvetica;
     font-weight: 300;
 }
 
@@ -45,8 +45,10 @@ a:hover {
     color: #258faf;
 }
 
-input, button, select {
-    font-family: 'Helvetica Neue Light', 'Open Sans', Helvetica;
+input,
+button,
+select {
+    font-family: "Helvetica Neue Light", "Open Sans", Helvetica;
     font-weight: 300;
     font-size: 14px;
     padding: 2px;
@@ -74,7 +76,7 @@ input, button, select {
     left: 200px;
 }
 
-iframe[name='demo'] {
+iframe[name="demo"] {
     display: block;
     width: 100%;
     height: 100%;

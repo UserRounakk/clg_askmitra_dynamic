@@ -1,4 +1,4 @@
-import { BaseOptions } from './BaseOptions';
+import { BaseOptions } from "./BaseOptions";
 export interface RawOptions extends BaseOptions {
     filter?: string | string[];
 }
